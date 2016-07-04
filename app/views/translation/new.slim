@@ -1,0 +1,10 @@
+= simple_form_for @translation, url: translation_index_path do |f|
+  = f.input :input_text, as: :text,
+          placeholder: 'Enter text here',
+          class: 'textarea form-control',
+          input_html: { rows: '4' }
+  = f.input :source_language, as: :select, collection: Translation::LANGUAGES, include_blank: false
+  = f.input :target_language, as: :select, collection: Translation::LANGUAGES, include_blank: false
+  br
+
+  = f.button :submit, 'Get Estimates', class: 'btn btn-primary'
