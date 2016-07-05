@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  resources :translation, only: [:new, :create] do
+  resources :translation, only: [:new, :create, :show, :index] do
+    get :confirm
     post :receive
   end
 

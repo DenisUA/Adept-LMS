@@ -1,0 +1,38 @@
+.col-md-10.col-md-offset-1
+  h1 Confirm page
+  p
+    strong Id:
+    '
+    = @translation.id
+  p
+    strong Input Text:
+    '
+    = @translation.input_text
+
+  - if @translation.output_text.present?
+    p
+      strong Output Text:
+      '
+      = @translation.output_text
+  p
+    strong Language:
+    '
+    = @translation.source_language
+  p
+    strong Target Language:
+    '
+    = @translation.target_language
+  p
+    strong Total words:
+    '
+    = @result[3]
+  p
+    strong Price, euro:
+    '
+    = @result[4]
+  p
+    strong Estimation date:
+    '
+    = @result[2].to_date
+
+  = link_to 'Agree with prices', translation_confirm_path(@translation), class: 'btn btn-success'

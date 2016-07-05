@@ -1,0 +1,32 @@
+.page-header
+  h1 Translations
+
+.form-group
+  a.btn.btn-success href="#{new_translation_path}"
+    i.fa.fa-plus
+    '  New Translation
+
+br
+
+table.table
+  tr
+    th ID
+    th Input text
+    th Output text
+    th Source language
+    th Target language
+    th Words
+    th Created at
+    th Actions
+  - @translations.each do |tr|
+    tr
+      td = tr.id
+      td = tr.input_text
+      td = tr.output_text
+      td = tr.source_language
+      td = tr.target_language
+      td = words_count(tr.input_text)
+      td = tr.created_at.to_date
+      td
+        .btn-toolbar
+          = link_to 'Show', translation_path(tr), class: 'btn btn-primary'

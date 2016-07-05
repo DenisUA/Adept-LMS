@@ -7,4 +7,6 @@
   = f.input :target_language, as: :select, collection: Translation::LANGUAGES, include_blank: false
   br
 
-  = f.button :submit, 'Get Estimates', class: 'btn btn-primary'
+  .btn-toolbar
+    = f.button :submit, 'Get Estimates', class: 'btn btn-success'
+    = link_to 'All Translations', translation_index_path, class: 'btn btn-primary'
