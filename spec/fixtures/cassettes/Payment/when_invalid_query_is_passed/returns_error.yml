@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://www.translated.net/hts/
+    body:
+      encoding: UTF-8
+      string: f=confirm&cid=htsdemo&p=htsdemo5&pid=14797168&c=1&sandbox=1
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 06 Jul 2016 14:13:06 GMT
+      Server:
+      - Apache/2.2.9 (Debian) PHP/5.2.6-1+lenny16 with Suhosin-Patch mod_ssl/2.2.9
+        OpenSSL/0.9.8k
+      X-Powered-By:
+      - PHP/5.2.6-1+lenny16
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - X-Requested-With
+      Access-Control-Allow-Methods:
+      - GET, POST
+      Access-Control-Max-Age:
+      - '0'
+      Cache-Control:
+      - max-age=604800
+      Expires:
+      - Wed, 13 Jul 2016 14:13:06 GMT
+      Vary:
+      - User-Agent,Accept-Encoding
+      Content-Length:
+      - '63'
+      Content-Type:
+      - text/plain; charset=utf-8
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        0
+        THIS ORDER (14797168) CANNOT BE CONFIRMED
+    http_version: 
+  recorded_at: Wed, 06 Jul 2016 14:13:06 GMT
+recorded_with: VCR 3.0.3

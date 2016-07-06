@@ -26,7 +26,10 @@ group :development do
 end
 
 group :test do
-  gem 'database_rewinder'
+  gem 'factory_girl_rails'
   gem 'rspec-rails'
+  gem 'database_rewinder'
   gem 'selenium-webdriver'
+  gem 'webmock'
+  gem 'vcr'
 end
